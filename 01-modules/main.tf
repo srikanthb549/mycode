@@ -4,7 +4,7 @@ resource "aws_instance" "instance" {
   instance_type          = "t3.small"
   vpc_security_group_ids = ["sg-0781e11c5f22234f7"]
   tags = {
-    name = var.ec2-instances[count.index]
+    Name = var.ec2-instances[count.index]
   }
 }
 
