@@ -1,6 +1,6 @@
 ###Following is the example for providing instance list in MAP variable format
 resource "aws_instance" "instance" {
-  for-each = var.ec2-instances
+  for_each = var.ec2-instances
   ami                    = "ami-09c813fb71547fc4f"
   instance_type          = "t3.small"
   vpc_security_group_ids = ["sg-0781e11c5f22234f7"]
@@ -17,7 +17,7 @@ variable "ec2-instances" {
 }
 
 resource "aws_route53_record" "route53" {
-  for-each = var.ec2-instances
+  for_each = var.ec2-instances
   name    = each.key
   type    = "A"
   zone_id = "Z08641142SH8HBQE1FAJT"
