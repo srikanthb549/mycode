@@ -9,7 +9,7 @@ resource "aws_instance" "instance" {
 }
 
 variable "ec2-instances" {
-  default = [ "prod1" ]
+  default = [ "prod1","prod9" ]
 }
 
 
