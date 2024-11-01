@@ -19,6 +19,6 @@ resource "aws_route53_record" "route53" {
   type    = "A"
   zone_id = "Z08641142SH8HBQE1FAJT"
   ttl     = "30"
-  records = [aws_instance.instance[count.var.ec2-instances].private_ip]
+  records = [aws_instance.instance[count.index].private_ip]
 }
 
