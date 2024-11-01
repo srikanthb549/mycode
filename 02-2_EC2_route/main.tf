@@ -28,7 +28,6 @@ resource "aws_route53_record" "route53" {
 
 
 
-
 ###Following is the example for providing instance list in List variable format
 # resource "aws_instance" "instance" {
 #   count = length(var.ec2-instances)
